@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Icon -->
+  <link rel="icon" href="https://picsum.photos/id/40/40">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./src/styles/css/style.css">
+
+  <title>Lista de vinos</title>
+</head>
+<body class="bg-secondary text-light">
+  <div class="container text-center mt-5">
+    <div class="d-flex align-items-center justify-content-center">
+      <h1 class="ms-5">Mi Colección de vinos 🍷</h1>
+      <!-- Sacar Formulario -->
+      <div class="ms-auto mb-4 add add-edit">
+        <button class="plus btn text-light btn-primary fs-5"><i class="bi bi-plus-lg"></i></button>
+      </div>
+    </div>
+    <!-- Filtros -->
+    <div class="row">
+      <section class="col-3 me-auto my-5">
+        <form class=" filters-form my-4 align-items-center">
+          <h2 class="text-start fs-4">Filtros:</h2>
+          <!-- Buscar -->
+          <div class="mb-3">
+            <input class="form-control" name="search" type="text" placeholder="Buscar..." autocomplete="off">
+          </div>
+          <!-- Filtro Tipos de vino -->
+          <div class="mb-3">
+            <select class="form-select" name="typesWineFilter" >
+              <option value="Tipo de vino">Tipo de vino</option>
+              <option value="Vino blanco">Vino blanco</option>
+              <option value="Vino tinto">Vino tinto</option>
+              <option value="Vino rosado">Vino rosado</option>
+              <option value="Vino dulce">Vino dulce</option>
+              <option value="Vino espumoso">Vino espumoso</option>
+              <option value="Vino generoso">Vino generoso</option>
+              <option value="Vino ecológico">Vino ecológico</option>
+              <option value="Vino aromatizado">Vino aromatizado</option>
+            </select>
+          </div>
+            <!-- Filtro Catado-->
+          <div class="form-check form-switch d-flex align-items-center p-2 align-items-center justify-content-start">
+            <input class="form-check-input m-0" name="tastedFilter" type="checkbox" id="tastedFilter" role="switch">
+            <label class="form-check-label ms-2 fs-6" for="tastedFilter">
+              Catado
+            </label>
+          </div>
+          <!-- Filtro No Catado-->
+          <div class="form-check form-switch d-flex align-items-center p-2 align-items-center justify-content-start">
+            <input class="form-check-input m-0" name="notTastedFilter" type="checkbox" id="notTastedFilter" role="switch">
+            <label class="form-check-label ms-2 fs-6" for="notTastedFilter">
+              No Catado
+            </label>
+          </div>
+          <!-- Filtro Favoritos-->
+          <div class="form-check form-switch d-flex align-items-center p-2 align-items-center justify-content-start">
+            <input class="form-check-input m-0" type="checkbox" name="favoriteFilter" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label ms-2 fs-6" for="flexSwitchCheckDefault">Favoritos</label>
+          </div>
+        </form>
+       <!--  listado de vinos -->
+      </section>
+      <section class="wine-list text-start col-9 p-4 row">
+      </section>
+    </div>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <form class="form form-add text-center">
+        <div class="row g-3 mx-3 p-3 justify-content-center">
+          <div class="col-10 mt-4">
+            <input name="nameOfWine" class="form-control" type="text" placeholder="Nombre..." autocomplete="off">
+          </div>
+          <div class="col-10">
+            <input name="wineCellar" class="form-control" type="text" placeholder="Bodega..." autocomplete="off">
+          </div>
+          <div class="col-10">
+            <input name="elaborationArea" class="form-control" type="text" placeholder="Zona Elaboración..." autocomplete="off">
+          </div>
+          <div class="col-10">
+            <input name="denominationOfOrigin" class="form-control" type="text" placeholder="D.O. o I.G.P..." autocomplete="off">
+          </div>
+          <div class="col-10">
+            <select class="form-select " name="typeOfWine" >
+              <option value="Tipo de vino">Tipo de vino</option>
+              <option value="Vino blanco">Vino blanco</option>
+              <option value="Vino tinto">Vino tinto</option>
+              <option value="Vino rosado">Vino rosado</option>
+              <option value="Vino dulce">Vino dulce</option>
+              <option value="Vino espumoso">Vino espumoso</option>
+              <option value="Vino generoso">Vino generoso</option>
+              <option value="Vino ecológico">Vino ecológico</option>
+              <option value="Vino aromatizado">Vino aromatizado</option>
+            </select>
+          </div>
+          <div class="col-10">
+            <input name="photo" class="form-control" type="url" placeholder="URL de la foto..." autocomplete="off">
+          </div>
+          <div class=" col-10 form-tasted form-switch d-flex align-items-center p-2 align-items-center justify-content-center">
+            <label class="form-check-label me-3 fs-5 text-secondary" for="tasted">¿Catado?</label>
+            <input class="form-check-input m-0" type="checkbox" name="tasted" id="tasted">
+          </div>
+          <div class="col-10 mb-4 add-form ">
+            <button type="button" name="cancelForm" class="btn btn-success">Cancelar</button>
+            <button type="submit" name="addForm" class="btn btn-secondary">Guardar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Javascrip -->
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>

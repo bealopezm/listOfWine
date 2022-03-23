@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;700&display=swap');
+
+$font-family-sans-serif: 'League Spartan', sans-serif;
+
+
+$primary: #83c5be;
+$light: #edf6f9;
+$secondary:#006d77;
+$success: #e29578;
+$info: #ffddd2;
+$warning: #f28482;
+$input-bg: #edf6f9; 
+$input-border-color: #edf6f9;
+
+/* Sidebar */
+.sidebar {
+  background: #F8EDF0;
+  text-align: center;
+  width: 325px;
+  position: absolute;
+  margin-left: 3.5rem;
+  top: 4rem;
+  left: -400px;
+  border-radius: 5px;
+  z-index: 5;
+  position: fixed;
+
+  &-right {
+    transition: left 0.5s ease;
+    animation: appearLeft 0.5s ease forwards;
+  }
+
+  &-left {
+    transition: left 0.5s ease;
+    animation: disappearLeft 0.5s ease forwards;
+  }
+}
+
+@keyframes appearLeft {
+  from {
+    left: -400px;
+  }
+  to {
+    left: 0px;
+  }
+}
+@keyframes disappearLeft {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -400px;
+  }
+}
+.add{
+  z-index: 5;
+}
+
+.input-error{
+  box-shadow: 0 0 0 0.25rem rgba(255, 99, 71, 0.609) !important;
+}
+
+/* iconos */
+i.icon{
+  cursor: pointer;
+}
+.plus{
+  height: 38px !important;
+}
+
+/* Fotos */
+.img-thumbnail{
+  height: 6.5rem !important;
+}
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../../../node_modules/bootstrap-icons/font/bootstrap-icons.css';
+
